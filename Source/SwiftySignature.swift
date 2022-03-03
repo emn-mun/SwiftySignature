@@ -187,6 +187,14 @@ open class SignatureView: UIView {
         }
     }
     
+    public func signatureComponents() -> [Any] {
+        return pathArray
+    }
+    
+    public func setSignatureComponents(components: [Any]) {
+        pathArray = components as! [Line]
+    }
+    
     /********************************** Private Functions **********************************/
     
     private func captureSignatureFromView() -> UIImage? {
